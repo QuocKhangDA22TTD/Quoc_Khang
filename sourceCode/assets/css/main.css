@@ -1,0 +1,771 @@
+:root {
+    --firstBackGroundColor: #eee;
+    --secondBackGroundColor: #555;
+    --thirdBackGroundColor: #333;
+    --fourthBackGroundColor: #fff;
+    --firstTextColor: #222;
+    --secondTextColor: #fff;
+}
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--firstBackGroundColor);
+}
+
+.logo > a {
+    display: inline-block;
+    color: var(--secondTextColor);
+    font-weight: bolder;
+    font-size: 3.5rem;
+    padding: 1.5rem;
+    text-decoration: none;
+    background-color: var(--firstTextColor);
+    border-radius: 100%;
+    margin: 1rem 0 1rem 1rem;
+    box-shadow: 0.5rem 0.5rem 0.3rem #000;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.form input:first-child {
+    outline: none;
+    width: 35rem;
+}
+
+.form input:last-child {
+    font-weight: bolder;
+}
+
+.form input {
+    border: 2px solid #000;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.form__search > button {
+    border: 2px solid #000;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+#searchList {
+    width: 35rem;
+    border: 2px solid #000; 
+    position: absolute;
+    top: 6rem;
+    background-color: var(--firstBackGroundColor);
+    z-index: 2;
+}
+
+#searchList > a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.account {
+    display: flex;
+    align-self: center;
+}
+
+.account > a {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: all 200ms;
+}
+
+.account > a:hover {
+    color: var(--secondTextColor);
+    background-color: var(--thirdBackGroundColor);
+    box-shadow: 0 0.5rem 0.3rem #000;
+}
+
+.dash {
+    font-size: 2rem;
+}
+
+.menuIcon {
+    display: none;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 1.5rem;
+}
+
+.menuIcon:hover {
+    background-color: var(--thirdBackGroundColor);
+}
+
+.menuIcon:hover > .bar {
+    background-color: var(--firstBackGroundColor);
+}
+
+.menuIcon > .bar {
+    width: 5rem;
+    height: 0.5rem;
+    background-color: var(--thirdBackGroundColor);
+}
+
+.bar + .bar {
+    margin: 0.5rem 0;
+}
+
+/* nav */
+
+nav {
+    background-color: var(--secondBackGroundColor);
+}
+
+nav > a {
+    display: inline-block;
+    color: var(--secondTextColor);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    transition: all 200ms;
+    font-weight: bolder;
+}
+
+nav > a:hover {
+    color: var(--secondTextColor);
+    background-color: var(--thirdBackGroundColor);
+}
+
+.dropDownOfCategory {
+    display: inline-block;
+    position: relative;
+}
+
+.dropDownOfCategory > a {
+    color: var(--secondTextColor);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    transition: all 200ms;
+    font-weight: bolder;
+}
+
+.dropDownOfCategory > a:hover {
+    color: var(--secondTextColor);
+    background-color: var(--firstTextColor);
+}
+
+.dropDownOfCategory:hover > a {
+    color: var(--secondTextColor);
+    background-color: var(--firstTextColor);
+}
+
+.dropDownOfCategory:hover .dropDownContent {
+    display: flex;
+}
+
+.dropDownContent {
+    display: none;
+    justify-content: start;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: 1.5rem;
+    background-color: var(--thirdBackGroundColor);
+    min-width: 80rem;
+    transition: all 3s;
+}
+
+.dropDownContent > a {
+    display: block;
+    color: var(--secondTextColor);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    flex-basis: 20rem;
+    transition: all 100ms;
+}
+
+.dropDownContent > a:hover {
+    color: var(--secondTextColor);
+    background-color: var(--firstTextColor);
+}
+
+#userAccount {
+    font-size: 2rem;
+    font-weight: bolder;
+    font-style: italic;
+    background-color: var(--fourthBackGroundColor);
+    color: var(--firstTextColor);
+    padding: 1rem;
+    margin: 0.2rem;
+    border-radius: 100%;
+    float: right;
+}
+
+#mobileFormLogin {
+    display: none;
+}
+
+#mobileFormSignin {
+    display: none;
+}
+
+.displaySearch {
+    display: block !important;
+}
+
+/* main */
+
+main {
+    background-color: var(--fourthBackGroundColor);
+}
+
+.topMain {
+    background-color: var(--thirdBackGroundColor);
+    text-align: center;
+    padding: 2rem;
+}
+
+.topMain > p {
+    color: var(--firstTextColor);
+    font-size: 2rem;
+    background-color: var(--firstBackGroundColor);
+    padding: 1rem 0 1rem 0;
+    box-shadow: 0 0.5rem 0.3rem #000;
+}
+
+.topMain > p > span {
+    color: #00f;
+}
+
+.mainContent {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    width: 97%;
+    background-color: var(--secondBackGroundColor);
+    padding: 1.5rem 1rem 1.5rem 1rem;
+}
+
+.mainContent > form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainContent > form > label {
+    font-size: 2rem;
+    color: var(--secondTextColor);
+    text-align: center;
+}
+
+.mainContent > form > input {
+    width: 100%;
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    outline: none;
+    font-weight: bolder;
+}
+
+.mainContent > form > select {
+    width: 100%;
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    outline: none;
+    font-weight: bolder;
+    background-color: var(--thirdBackGroundColor);
+    color: var(--secondTextColor);
+}
+
+.mainContent > form > input:last-child {
+    width: 30%;
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    outline: none;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: var(--firstBackGroundColor);
+    color: var(--firstTextColor);
+    border: none;
+    box-shadow: 0 0.5rem 0.3rem #000;
+}
+
+.mainContent > form > textarea {
+    width: 100%;
+    min-height: 50rem;
+    outline: none;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.mainContent > div {
+    width: 48%;
+    margin: 1rem;
+    background-color: var(--firstBackGroundColor);
+    height: 51.5rem;
+    overflow-y: hidden;
+}
+
+.mainContent > div > h1 {
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+    color: var(--secondTextColor);
+    background-color: var(--thirdBackGroundColor);
+    box-shadow: 0 0.5rem 0.3rem #000;
+}
+
+.mainContent > div > h2 {
+    font-size: 2.5rem;
+    font-style: italic;
+    text-align: center;
+    padding: 1rem;
+}
+
+.mainContent > div > img {
+    float: right;
+    margin: 1rem 1rem 0 1rem;
+    object-fit: cover;
+    max-height: 20rem;
+    box-shadow: 0 0.5rem 0.3rem #000;
+}
+
+.mainContent > div > pre {
+    font-size: 2rem;
+    text-align: justify;
+    padding: 1rem 1rem 3rem 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.mainContent > div > a {
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    position: relative;
+    top: 93%;
+    left: 40%;
+    z-index: 2;
+    background-color: var(--thirdBackGroundColor);
+    color: var(--secondTextColor);
+    text-decoration: none;
+}
+
+#listOfmajors {
+    display: none;
+    margin: 2rem auto;
+    width: 97%;
+    min-height: 40rem;
+    background-color: var(--secondBackGroundColor);
+    padding: 2rem;
+}
+
+#listOfmajors > h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    background-color: var(--thirdBackGroundColor);
+    color: var(--secondTextColor);
+    padding: 0.5rem;
+    box-shadow: 0 0.5rem 0.3rem #000;
+}
+
+#listOfmajors > h2 {
+    text-align: left;
+    font-size: 2.5rem;
+    color: var(--firstTextColor);
+    background-color: var(--fourthBackGroundColor);
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+#listOfmajors > img {
+    float: right;
+    height: 20%;
+    width: 20%;
+    margin: 1rem 2rem 1rem 2rem;
+    object-fit: cover;
+    box-shadow: 0 0.5rem 0.3rem #000;
+}
+
+#listOfmajors > pre {
+    font-size: 2rem;
+    text-align: justify;
+    padding: 1rem 1rem 3rem 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: var(--secondTextColor);
+}
+
+.soft_of_article {
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: var(--thirdBackGroundColor);
+    color: var(--secondTextColor);
+    transition: all 200ms;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.soft_of_article:hover {
+    color: var(--firstTextColor);
+    background-color: var(--firstBackGroundColor);
+}
+
+.soft_of_article > span {
+    font-size: 2rem;
+}
+
+.soft_of_article > h1 {
+    font-size: 2rem;
+}
+
+#login_and_signin_form {
+    margin: 2rem auto;
+    width: 97%;
+    background-color: var(--secondBackGroundColor);
+    padding: 2rem;
+}
+
+#loginForm {
+    display: none;
+    padding: 2rem;
+    background-color: var(--thirdBackGroundColor);
+    color: var(--secondTextColor);
+}
+
+#loginForm > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#loginForm > form > h1 {
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    width: 100%;
+    background-color: var(--secondBackGroundColor);
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 0.5rem 0.3rem #000;
+}
+
+#loginForm > form > label {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#loginForm > form > input {
+    width: 40%;
+    font-size: 2rem;
+    text-align: center;
+    outline: none;
+    padding: 1rem;
+}
+
+#loginForm > form > input:last-child {
+    width: 15%;
+    font-size: 2rem;
+    text-align: center;
+    outline: none;
+    padding: 1rem;
+    color: var(--firstTextColor);
+    background-color: var(--firstBackGroundColor);
+    border: none;
+    cursor: pointer;
+}
+
+#signinForm {
+    display: none;
+    padding: 2rem;
+    background-color: var(--thirdBackGroundColor);
+    color: var(--secondTextColor);
+}
+
+#signinForm > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#signinForm > form > h1 {
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    width: 100%;
+    background-color: var(--secondBackGroundColor);
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 0.5rem 0.3rem #000;
+}
+
+#signinForm > form > label {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#signinForm > form > input {
+    width: 40%;
+    font-size: 2rem;
+    text-align: center;
+    outline: none;
+    padding: 1rem;
+}
+
+#signinForm > form > input:last-child {
+    width: 15%;
+    font-size: 2rem;
+    text-align: center;
+    outline: none;
+    padding: 1rem;
+    color: var(--firstTextColor);
+    background-color: var(--firstBackGroundColor);
+    border: none;
+    cursor: pointer;
+}
+
+#articlePage {
+    margin: 2rem auto;
+    width: 97%;
+    background-color: var(--secondBackGroundColor);
+    padding: 1.5rem 1rem 1.5rem 1rem;
+}
+
+#comment > #commenting > #comment_input {
+    width: 100%;
+    font-size: 1.5rem;
+    outline: none;
+    padding: 0.5rem;
+}
+
+#comment > #commenting > input[type="submit"] {
+    font-size: 1.5rem;
+    outline: none;
+    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+}
+
+.comments {
+    background-color: var(--firstBackGroundColor);
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+    box-shadow: 0 0.5rem 0.3rem #000;
+}
+
+.comments:last-child {
+    margin-bottom: 5rem;
+}
+
+.comments > #commentInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.comments > #commentInfo > #userName {
+    font-size: 2rem;
+    color: var(--secondTextColor);
+    background-color: var(--thirdBackGroundColor);
+    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+    margin: 1rem 0 0 1rem;
+}
+
+.comments > #commentInfo > #date {
+    font-size: 2rem;
+    color: var(--secondTextColor);
+    background-color: var(--thirdBackGroundColor);
+    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+    margin: 1rem 1rem 0 0;
+}
+
+#commentContent > pre {
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: var(--secondTextColor);
+    margin: 1rem;
+    background-color: var(--thirdBackGroundColor);
+}
+
+/* footer */
+
+.contact {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--thirdBackGroundColor);
+}
+
+.contact > p {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: var(--secondTextColor);
+    padding: 2rem;
+    color: var(--firstTextColor);
+    background-color: var(--firstBackGroundColor);
+    box-shadow: 0 0.5rem 0.3rem #000;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 800px) {
+
+    /* header */
+
+    header .logo > a {
+        font-size: 2.5rem;
+    }
+
+    header .form {
+        display: none;
+        width: 100%;
+        height: 9.5%;
+        z-index: 2;
+        position: absolute;
+        top: 0%;
+        background-color: var(--thirdBackGroundColor);
+    }
+
+    header .form input:first-child {
+        width: 80%;
+    }
+
+    header .form #searchList {
+        top: 3rem;
+        width: 80%;
+    }
+
+    header .account {
+        display: none;
+    }
+
+    /* nav */
+
+    .menuIcon {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .displayNav {
+        display: block;
+        width: 100%;
+        position: absolute;
+    }
+
+    .dropDownOfCategory {
+        width: 100%;
+    }
+
+    nav > a, .dropDownOfCategory > a {
+        display: block;
+    }
+
+    .dropDownOfCategory:hover .dropDownContent {
+        display: flex;
+    }
+
+    .dropDownContent  {
+        display: none;
+        position: relative;
+        flex-direction: column;
+        margin: 0;
+        min-width: 10rem;
+    }
+
+    .dropDownContent > a {
+        flex-basis: 0;
+    }
+
+    #mobileFormLogin {
+        display: block;
+    }
+    #mobileFormSignin {
+        display: block;
+    }
+
+    /* main */
+
+    .mainContent {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .mainContent > div {
+        width: 100%;
+        height: 90rem;
+        margin: 1rem 0;
+    }
+
+    .mainContent > div > h1, h2 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .mainContent > div > img {
+        float: unset;
+        width: 100%;
+        margin: 1rem 0 1rem 0;
+        object-fit: contain;
+        box-shadow: unset;
+    }
+
+    #listOfmajors {
+        width: 100%;
+        padding: 0;
+    }
+
+    #listOfmajors > img {
+        float: unset;
+        width: 100%;
+        height: 25rem;
+        margin: 0;
+        object-fit: contain;
+        box-shadow: none;
+    }
+
+    #listOfmajors > h2 {
+        text-align: center;
+    }
+
+    #loginForm > form > input {
+        width: 100%;
+    }
+
+    #loginForm > form > input:last-child {
+        width: 55%;
+    }
+
+    #signinForm > form > input {
+        width: 100%;
+    }
+    
+    #signinForm > form > input:last-child {
+        width: 55%;
+    }
+
+    .mainContent > div > a {
+        /* font-size: 2rem;
+        text-align: center;
+        padding: 1rem 2.5rem 1rem 2.5rem;
+        position: relative; */
+        top: 87rem;
+        left: 35%;
+        /* z-index: 2;
+        background-color: var(--thirdBackGroundColor);
+        color: var(--secondTextColor); */
+    }
+
+    /* #listOfmajors > img {
+        float: unset;
+    } */
+}
