@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="#">BKTT</a>
+            </div>
+            <div class="form">
+                <form class="form__search" action="./server/connect.php" method="post">
+                    <input type="search" id="keySearch" name="key_val">
+                    <input type="submit" value="tìm kiếm">
+                </form>
+            </div>
+            <div class="account">
+                <a href="#">ĐĂNG NHẬP</a>
+                <span class="dash">/</span>
+                <a href="#">ĐĂNG KÝ</a>
+            </div>
+        </header>
+        <nav>
+            <a href="#">TRANG CHỦ</a>
+            <a href="#">GIỚI THIỆU</a>
+            <div class="dropDownOfCategory">
+                <a href="#">THỂ LOẠI</a>
+                <div class="dropDownContent">
+                    <a href="#">LỊCH SỬ</a>
+                    <a href="#">QUÂN SỰ</a>
+                    <a href="#">VĂN HÓA</a>
+                    <a href="#">ĐỊA LÝ</a>
+                    <a href="#">KIẾN TRÚC</a>
+                </div>
+            </div>
+            <a href="#">BÀI VIẾT NGẪU NHIÊN</a>
+            <a href="#">ĐÓNG GÓP</a>
+        </nav>
+        <main>
+            <div class="topMain">
+                <p>
+                    <span class="article">0</span> bài viết và <span class="member">0</span> thành viên
+                </p>
+            </div>
+            <div class="mainContent">
+                <div id="mostViews"></div>
+                <div id="latest"></div>
+                <div id="hotNews"></div>
+                <div id="majors"></div>
+            </div>
+        </main>
+        <footer>
+            <div class="contact">
+                <p>
+                    email: <span class="emailInfo">BKTT@gmail.com</span>
+                    <br>
+                    Phone number : <span class="phoneNumberInfo">099 212 455</span>
+                    <br>
+                    facebook: <a class="facebookInfo" href="#"></a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script src="./assets/js/get_article_content.js"></script>
+</body>
+</html>
